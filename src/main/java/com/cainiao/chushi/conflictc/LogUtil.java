@@ -4,16 +4,17 @@ package com.cainiao.chushi.conflictc;
  * Created by dengrong on 2017/6/2.
  */
 
+import com.cainiao.chushi.sdk.service.BusinessService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
  * Created by dengrong on 2017/6/2.
  */
-public class LogUtil {
+public class LogUtil implements BusinessService{
     private Logger logger = LoggerFactory.getLogger(LogUtil.class);
 
-    public void log(String name){
+    public void execute(String name){
         // 记录error信息
         System.out.println("--------------------------------");
         logger.error("[info message]");
