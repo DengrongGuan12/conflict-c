@@ -1,4 +1,4 @@
-package com.cainiao.chushi.util;
+package com.cainiao.chushi.conflictc;
 
 /**
  * Created by dengrong on 2017/6/2.
@@ -6,15 +6,14 @@ package com.cainiao.chushi.util;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import sun.rmi.runtime.Log;
 
 /**
  * Created by dengrong on 2017/6/2.
  */
 public class LogUtil {
-    static private Logger logger = LoggerFactory.getLogger(LogUtil.class);
+    private Logger logger = LoggerFactory.getLogger(LogUtil.class);
 
-    public static void log(String name){
+    public void log(String name){
         // 记录error信息
         System.out.println("--------------------------------");
         logger.error("[info message]");
