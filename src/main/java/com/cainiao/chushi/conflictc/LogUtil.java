@@ -4,17 +4,25 @@ package com.cainiao.chushi.conflictc;
  * Created by dengrong on 2017/6/2.
  */
 
-import com.cainiao.chushi.sdk.service.BusinessService;
+import com.cainiao.alphabird.biz.sdk.service.BusinessService;
+import com.cainiao.alphabird.biz.sdk.service.BusinessServiceResultDTO;
+import com.cainiao.alphabird.biz.sdk.service.ExtTraceParams;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.Map;
 
 /**
  * Created by dengrong on 2017/6/2.
  */
-public class LogUtil implements BusinessService{
+public class LogUtil implements BusinessService {
     private Logger logger = LoggerFactory.getLogger(LogUtil.class);
 
-    public void execute(String name){
+    public void init(){
+        System.out.println("init");
+    }
+
+    public BusinessServiceResultDTO execute(String s, Map map) {
         // 记录error信息
         System.out.println("--------------------------------");
         logger.error("[info message]");
@@ -24,7 +32,24 @@ public class LogUtil implements BusinessService{
         // 记录deubg信息
         logger.debug("[debug message]");
         logger.trace("[trace message]");
-        System.out.println(name);
+        System.out.println(s);
         System.out.println("---------------------------------");
+        return new BusinessServiceResultDTO();
+    }
+
+    public String[] getServedBizIds() {
+        return new String[0];
+    }
+
+    public int getServicePriority() {
+        return 0;
+    }
+
+    public ExtTraceParams getExtTraceParams(String s, Map map) {
+        return null;
+    }
+
+    public String getRequestId(String s, Map map) {
+        return null;
     }
 }
