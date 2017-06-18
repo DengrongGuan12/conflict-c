@@ -7,13 +7,30 @@
     <groupId>com.cainiao.chushi</groupId>
     <artifactId>conflict-c</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <properties>
+
+        <!-- framework -->
+        <spring.version>4.3.6.RELEASE</spring.version>
+
+    </properties>
 
     <dependencies>
+        <!--<dependency>-->
+            <!--<groupId>com.cainiao.alphabird</groupId>-->
+            <!--<artifactId>alphabird-biz-sdk</artifactId>-->
+            <!--<version>1.0.0</version>-->
+        <!--</dependency>-->
         <dependency>
-            <groupId>com.cainiao.alphabird</groupId>
-            <artifactId>alphabird-biz-sdk</artifactId>
-            <version>1.0.0</version>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-core</artifactId>
+        <version>${spring.version}</version>
         </dependency>
+        <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-context</artifactId>
+        <version>${spring.version}</version>
+        </dependency>
+
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
