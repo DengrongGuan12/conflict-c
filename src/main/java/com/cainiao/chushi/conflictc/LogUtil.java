@@ -9,20 +9,26 @@ package com.cainiao.chushi.conflictc;
 //import com.cainiao.alphabird.biz.sdk.service.ExtTraceParams;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
 import java.util.Map;
 
 /**
  * Created by dengrong on 2017/6/2.
  */
+@Component
 public class LogUtil{
     private LogUtil2 logUtil2;
+    @Autowired
     public void setLogUtil2(LogUtil2 logUtil2){
         this.logUtil2 = logUtil2;
     }
 
     private Logger logger = LoggerFactory.getLogger(LogUtil.class);
 
+    @PostConstruct
     public void init(){
         logUtil2.log();
         System.out.println("init");
@@ -44,7 +50,7 @@ public class LogUtil{
 //    }
 
     public String[] getServedBizIds() {
-        return new String[0];
+        return new String[]{"sdfsdfsdf","dsfsdfsdfsdf"};
     }
 
     public int getServicePriority() {
@@ -56,6 +62,6 @@ public class LogUtil{
 //    }
 
     public String getRequestId(String s, Map map) {
-        return null;
+        return "000000";
     }
 }
