@@ -11,4 +11,7 @@
     <!--</bean>-->
     <!--<bean id="conflictc.LogUtil2" class="com.cainiao.chushi.conflictc.LogUtil2"/>-->
     <context:component-scan base-package="com.cainiao.chushi.conflictc" />
+    <bean id="diamondGroupAlphabird" class="org.springframework.beans.factory.config.FieldRetrievingFactoryBean">
+        <!--<property name="staticField" value="com.cainiao.alphabird.dump.client.constant.TairConfigDiamondGroup.ALPHABIRD" />-->
+    </bean>
 </beans>
